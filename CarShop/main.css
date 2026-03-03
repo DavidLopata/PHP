@@ -1,0 +1,389 @@
+/* ---------- RESET ---------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ---------- HEADER ---------- */
+header {
+    background: #1f2937;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 1.4rem;
+}
+
+nav a {
+    color: #fff;
+    margin-left: 1rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- MAIN LAYOUT ---------- */
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 2rem;
+    padding: 20px;
+    border-radius: 8px;
+}
+/* Pages without sidebar */
+main.cart,
+main.orders,
+main.product-manager {
+    display: block !important;
+    grid-template-columns: none !important;
+    gap: 0 !important;
+}
+
+
+main.no-sidebar {
+    display: block !important;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+
+
+
+/* ---------- SIDEBAR ---------- */
+aside {
+    background: #fff;
+    border-radius: 6px;
+    padding: 1rem;
+}
+h2 {
+    margin-top: 0;
+}
+aside h2 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside li {
+    margin-bottom: 0.5rem;
+}
+
+aside a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+aside a:hover {
+    text-decoration: underline;
+}
+input[type="number"] {
+    width: 80px;
+}
+
+input[type="submit"], button, a.button {
+    background: #2563eb;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+input[type="submit"]:hover,
+button:hover,
+a.button:hover {
+    background: #1d4ed8;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 12px;
+    text-align: center;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.product-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.product-card .code {
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.product-card .price {
+    margin-top: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #16a34a;
+}
+
+.product-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+    background: #e5e7eb;
+}
+
+
+/* ---------- TABLE ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table th {
+    background: #e5e7eb;
+    text-align: left;
+}
+
+table th, table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+th, td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+th {
+    background: #f3f4f6;
+    font-weight: 600;
+}
+
+tr:hover {
+    background: #f9fafb;
+}
+
+button {
+    background: #dc2626;
+    color: #fff;
+    border: none;
+    padding: 0.4rem 0.7rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #b91c1c;
+}
+
+/* ---------- FORMS ---------- */
+form label {
+    font-weight: 500;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.4rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.8rem;
+}
+
+
+
+/* ---------- CONTENT ---------- */
+section {
+    background: #fff;
+    border-radius: 6px;
+    padding: 1.5rem;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    margin-top: 3rem;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* ---------- PAGE TITLES ---------- */
+.page-title {
+    margin-bottom: 3rem;
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+/* ---------- CART SUMMARY ---------- */
+.cart-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding-top: 1.2rem;
+    border-top: 2px solid #e5e7eb;
+}
+
+.cart-total {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+/* ---------- ORDERS ---------- */
+.orders {
+    max-width: 800px;
+    margin: 60px auto;
+}
+
+.order-box {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    padding: 1.25rem;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+}
+
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        margin-top: 0.5rem;
+    }
+    .cart {
+    background: #fff;
+    border-radius: 8px;
+    }
+
+
+    main.cart {
+        display: block;
+        max-width: 900px;
+    }
+
+    .cart h2 {
+        margin-bottom: 1.5rem;
+    }
+
+
+    .cart th {
+        background: #1f2937;
+        color: #ffffff;
+    }
+
+    .cart td {
+        vertical-align: middle;
+    }
+
+    .cart .qty-input {
+        width: 70px;
+    }
+
+    .cart .remove-btn {
+        background: #dc2626;
+        padding: 6px 10px;
+    }
+
+    .cart .remove-btn:hover {
+        background: #b91c1c;
+    }
+
+    .cart .actions {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .cart .total-row td {
+        font-size: 1.1rem;
+        font-weight: 600;
+        background: #f3f4f6;
+    }
+
+    .cart .empty {
+        text-align: center;
+        padding: 2rem;
+    }
+
+
+    .cart-table {
+        width: 100%;
+    }
+
+        .cart-checkout input[type="submit"] {
+            background: #dc2626;
+            padding: 0.6rem 1.4rem;
+            font-size: 1rem;
+        }
+
+
+    .order-date {
+        color: #6b7280;
+        margin-bottom: 0.75rem;
+        }
+
+
+    .cart,
+    .orders {
+        max-width: 1000px;
+        margin: 60px auto;
+        
+        }
+    .orders .order-box {
+        margin-top: 0;
+    }
+
+    .orders .order-box + .order-box {
+        margin-top: 2rem;
+    }
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+    .orders,
+    .cart,
+    .product-manager {
+        background: transparent;
+    }
+}
